@@ -23,7 +23,8 @@
         p{
         font-size: x-large;
         margin-bottom: -0.5%;
-        margin-top: 1px;}
+        margin-top: 1px;
+    width: 50%;}
         .text{width: 55%;
             float: right;}
         #st:before{content: 'Starting Time :';}
@@ -33,57 +34,71 @@
             color: red;
             border: red;
         }
+        .submit:hover{
+            background-color: black;
+            color: white;
+        }
 </style>
 </head>
 <body>
    <form method="post" name="form">
     <h1>INTERVIEW FEEDBACK</h1>
     <h2>Genernal Information</h2>
-    <input type="text" placeholder="INTERVIEW NAME">
-    <input type="text" class="last" placeholder="APPLICANT NAME"><br>
-    <input type="date" style="margin-top: 15px;">
-    <input class="last" id="st" type="time" style="margin-top: 15px;">
+    <input name="INTERVIEW NAME" type="text" placeholder="INTERVIEW NAME">
+    <input type="text" name="CANDIDATE NAME" class="last" placeholder="CANDIDATE NAME"><br>
+    <input type="date" name="DATE" style="margin-top: 15px;">
+    <input class="last" id="st" name="START TIME" type="time" style="margin-top: 15px;">
+
+
     <h2>Other Information</h2>
     <p>Resume and Self Introduction</p>
-    <select name="rc" id="rc">
+    <select name="Resume and Self Introduction" id="Resume and Self Introduction">
         <option value="1">1 - Poor</option>
         <option value="2">2 - Below Average</option>
         <option value="3">3 - Average</option>
         <option value="4">4 - Good</option>
         <option value="5">5 - Excellent</option>
     </select>
-    <input type="text" class="text" placeholder="Correct Spelling of Resume">
+    <input type="text" name="Resume Correction" class="text" placeholder="Correct Spelling of Resume">
+
+
     <p>Techinacal Skill</p>
-    <select name="tc" id="rc">
+    <select name="Techinacal Skill" id="Techinacal Skill">
         <option value="1">1 - Poor</option>
         <option value="2">2 - Below Average</option>
         <option value="3">3 - Average</option>
         <option value="4">4 - Good</option>
         <option value="5">5 - Excellent</option>
     </select>
-    <input type="text" class="text" placeholder="Where there considerate more?">
+    <input type="text" name="Techinacal part" class="text" placeholder="Where there considerate more ?">
+
+
     <p>Attitude and Communication</p>
-    <select name="ac" id="rc">
+    <select name="Attitude and Communication" id="Attitude and Communication">
         <option value="1">1 - Poor</option>
         <option value="2">2 - Below Average</option>
         <option value="3">3 - Average</option>
         <option value="4">4 - Good</option>
         <option value="5">5 - Excellent</option>
     </select>
-    <input type="text" class="text" placeholder="How did they communicate?">
+    <input type="text" name="Communication" class="text" placeholder="How did they communicate ?">
+
+
     <p>Logical Thinking</p>
-    <select name="lc" id="rc">
+    <select name="Logical Thinking" id="Logical Thinking">
         <option value="1">1 - Poor</option>
         <option value="2">2 - Below Average</option>
         <option value="3">3 - Average</option>
         <option value="4">4 - Good</option>
         <option value="5">5 - Excellent</option>
     </select>
-    <input type="text" class="text" placeholder="At present of the mind">
+    <input type="text" name="Thinking process" class="text" placeholder="At present of the mind">
+
+
     <br><br>
-    <input type="text" placeholder="Any other query to the person" style="width: 88%;">
+    <input type="text" name="Extera" placeholder="Any other query to the person" style="width: 88%;">
     <br><br>
-    <input type="time" id="et">
+    <input type="time" name="END TIME" id="et">
     <input type="submit" class="submit">
     
    </form> 
