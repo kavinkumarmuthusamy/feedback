@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title>
+    <style>
+      body{
+        background-color: rgb(217, 224, 224);
+      }
+        h1{
+            text-align: center;
+            background-color: rgba(19, 18, 18, 0.342);
+            color: rgb(247, 243, 243); }
+        h2{ 
+            text-align: center;
+            background-color: rgb(172, 172, 170);
+            color: black; }
+        .last{float: right; }
+        input,select,p{
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 20%;
+            padding: 12px;}
+        p{
+        font-size: x-large;
+        margin-bottom: -0.5%;
+        margin-top: 1px;}
+        .text{width: 55%;
+            float: right;}
+        #st:before{content: 'Starting Time :';}
+        #et:before{content: 'Ending Time :';}
+        .submit{float: right;}
+        input:hover{
+            color: red;
+            border: red;
+        }
+</style>
+</head>
+<body>
+   <form method="post" name="form">
+    <h1>INTERVIEW FEEDBACK</h1>
+    <h2>Genernal Information</h2>
+    <input type="text" placeholder="INTERVIEW NAME">
+    <input type="text" class="last" placeholder="APPLICANT NAME"><br>
+    <input type="date" style="margin-top: 15px;">
+    <input class="last" id="st" type="time" style="margin-top: 15px;">
+    <h2>Other Information</h2>
+    <p>Resume and Self Introduction</p>
+    <select name="rc" id="rc">
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Below Average</option>
+        <option value="3">3 - Average</option>
+        <option value="4">4 - Good</option>
+        <option value="5">5 - Excellent</option>
+    </select>
+    <input type="text" class="text" placeholder="Correct Spelling of Resume">
+    <p>Techinacal Skill</p>
+    <select name="tc" id="rc">
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Below Average</option>
+        <option value="3">3 - Average</option>
+        <option value="4">4 - Good</option>
+        <option value="5">5 - Excellent</option>
+    </select>
+    <input type="text" class="text" placeholder="Where there considerate more?">
+    <p>Attitude and Communication</p>
+    <select name="ac" id="rc">
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Below Average</option>
+        <option value="3">3 - Average</option>
+        <option value="4">4 - Good</option>
+        <option value="5">5 - Excellent</option>
+    </select>
+    <input type="text" class="text" placeholder="How did they communicate?">
+    <p>Logical Thinking</p>
+    <select name="lc" id="rc">
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Below Average</option>
+        <option value="3">3 - Average</option>
+        <option value="4">4 - Good</option>
+        <option value="5">5 - Excellent</option>
+    </select>
+    <input type="text" class="text" placeholder="At present of the mind">
+    <br><br>
+    <input type="text" placeholder="Any other query to the person" style="width: 88%;">
+    <br><br>
+    <input type="time" id="et">
+    <input type="submit" class="submit">
+    
+   </form> 
+
+</body>
+</html>
