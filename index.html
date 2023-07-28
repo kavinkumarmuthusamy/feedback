@@ -41,67 +41,79 @@
 </style>
 </head>
 <body>
-   <form method="post" name="form">
+   <form method="post" name="feedback">
     <h1>INTERVIEW FEEDBACK</h1>
     <h2>Genernal Information</h2>
-    <input name="INTERVIEW NAME" type="text" placeholder="INTERVIEW NAME">
-    <input type="text" name="CANDIDATE NAME" class="last" placeholder="CANDIDATE NAME"><br>
-    <input type="date" name="DATE" style="margin-top: 15px;">
-    <input class="last" id="st" name="START TIME" type="time" style="margin-top: 15px;">
+    <input name="INTERVIEW NAME" type="text" placeholder="INTERVIEW NAME" required>
+    <input type="text" name="CANDIDATE NAME" class="last" placeholder="CANDIDATE NAME" required><br>
+    <input type="date" name="DATE" style="margin-top: 15px;" required>
+    <input class="last" id="st" name="START TIME" type="time" style="margin-top: 15px;" required>
 
 
     <h2>Other Information</h2>
     <p>Resume and Self Introduction</p>
-    <select name="Resume and Self Introduction" id="Resume and Self Introduction">
-        <option value="1">1 - Poor</option>
-        <option value="2">2 - Below Average</option>
-        <option value="3">3 - Average</option>
-        <option value="4">4 - Good</option>
-        <option value="5">5 - Excellent</option>
+    <select name="Resume and Self Introduction" id="Resume and Self Introduction" required>
+        <option value="1 - Poor">1 - Poor</option>
+        <option value="2 - Below Average">2 - Below Average</option>
+        <option value="3 - Average">3 - Average</option>
+        <option value="4 - Good">4 - Good</option>
+        <option value="5 - Excellent">5 - Excellent</option>
     </select>
-    <input type="text" name="Resume Correction" class="text" placeholder="Correct Spelling of Resume">
+    <input type="text" name="Resume Correction" class="text" placeholder="Correct Spelling of Resume" required>
 
 
     <p>Techinacal Skill</p>
-    <select name="Techinacal Skill" id="Techinacal Skill">
-        <option value="1">1 - Poor</option>
-        <option value="2">2 - Below Average</option>
-        <option value="3">3 - Average</option>
-        <option value="4">4 - Good</option>
-        <option value="5">5 - Excellent</option>
+    <select name="Techinacal Skill" id="Techinacal Skill" required>
+        <option value="1 - Poor">1 - Poor</option>
+        <option value="2 - Below Average">2 - Below Average</option>
+        <option value="3 - Average">3 - Average</option>
+        <option value="4 - Good">4 - Good</option>
+        <option value="5 - Excellent">5 - Excellent</option>
     </select>
-    <input type="text" name="Techinacal part" class="text" placeholder="Where there considerate more ?">
+    <input type="text" name="Techinacal part" class="text" placeholder="Where there considerate more ?" required>
 
 
     <p>Attitude and Communication</p>
-    <select name="Attitude and Communication" id="Attitude and Communication">
-        <option value="1">1 - Poor</option>
-        <option value="2">2 - Below Average</option>
-        <option value="3">3 - Average</option>
-        <option value="4">4 - Good</option>
-        <option value="5">5 - Excellent</option>
+    <select name="Attitude and Communication" id="Attitude and Communication" required>
+        <option value="1 - Poor">1 - Poor</option>
+        <option value="2 - Below Average">2 - Below Average</option>
+        <option value="3 - Average">3 - Average</option>
+        <option value="4 - Good">4 - Good</option>
+        <option value="5 - Excellent">5 - Excellent</option>
     </select>
-    <input type="text" name="Communication" class="text" placeholder="How did they communicate ?">
+    <input type="text" name="Communication" class="text" placeholder="How did they communicate ?" required>
 
 
     <p>Logical Thinking</p>
-    <select name="Logical Thinking" id="Logical Thinking">
-        <option value="1">1 - Poor</option>
-        <option value="2">2 - Below Average</option>
-        <option value="3">3 - Average</option>
-        <option value="4">4 - Good</option>
-        <option value="5">5 - Excellent</option>
+    <select name="Logical Thinking" id="Logical Thinking" required>
+        <option value="1 - Poor">1 - Poor</option>
+        <option value="2 - Below Average">2 - Below Average</option>
+        <option value="3 - Average">3 - Average</option>
+        <option value="4 - Good">4 - Good</option>
+        <option value="5 - Excellent">5 - Excellent</option>
     </select>
-    <input type="text" name="Thinking process" class="text" placeholder="At present of the mind">
+    <input type="text" name="Thinking process" class="text" placeholder="At present of the mind" required>
 
 
     <br><br>
-    <input type="text" name="Extera" placeholder="Any other query to the person" style="width: 88%;">
+    <input type="text" name="Extera" placeholder="Any other query to the person" style="width: 88%;" required>
     <br><br>
     <input type="time" name="END TIME" id="et">
-    <input type="submit" class="submit">
-    
+    <input type="submit" class="submit">   
    </form> 
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxqZj87EEHR3BmTyV56oVVuPG96xoHQEXZU9Gt6yF0-6V2K5i3UjuHmoXzi0HuI1MMG/exec'
+    const form = document.forms['feedback']
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("Thank you! for takeing interview with your golden time." ))
+      .then(() => {  window.location.reload(); })
+      .catch(error => console.error('Error!', error.message))
+    })
+    </script>
 
 </body>
 </html>
